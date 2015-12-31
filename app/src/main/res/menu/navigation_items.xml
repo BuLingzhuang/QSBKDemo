@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="糗事" android:id="@+id/navigation_item_qiushi" android:icon="@mipmap/ic_qiushi_normal" android:checked="true"/>
+        <item android:title="糗友圈" android:id="@+id/navigation_item_qiuyouquan" android:icon="@mipmap/ic_qiuyoucircle_normal"/>
+        <item android:title="发现" android:id="@+id/navigation_item_faxian" android:icon="@mipmap/ic_nearby_normal"/>
+        <item android:title="小纸条" android:id="@+id/navigation_item_xiaozhitiao" android:icon="@mipmap/ic_message_normal"/>
+    </group>
+    <item android:title="我">
+        <menu>
+            <item android:id="@+id/navigation_item_self_login" android:title="登录/注册"/>
+            <item android:id="@+id/navigation_item_self_collect" android:title="收藏"/>
+            <item android:id="@+id/navigation_item_self_finish" android:title="退出"/>
+        </menu>
+    </item>
+</menu>

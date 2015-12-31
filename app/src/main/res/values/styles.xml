@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!-- 设置actionBar下的阴影为空，5.0以上在代码中定义-->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">#fdbe0c</item>
+        <item name="colorPrimaryDark">#fdbe0c</item>
+        <item name="colorAccent">#747474</item>
+    </style>
+    <!-- 设置TabLayout字体的大小-->
+    <style name="TabLayoutTextSize" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>
