@@ -61,9 +61,9 @@ public class ShowItemActivity extends AppCompatActivity implements Callback<Comm
 
             name.setText(itemsEntity.getUser().getLogin());
             String iconURL = getIconURL(itemsEntity.getUser().getId(), itemsEntity.getUser().getIcon());
-            if (iconURL == null) {
+            if (itemsEntity.getUser().getIcon().equals("")){
                 icon.setImageResource(R.mipmap.ic_launcher);
-            } else {
+            }else {
                 Picasso.with(this)
                         .load(iconURL)
                         .transform(new CircleTansformation())
@@ -106,7 +106,7 @@ public class ShowItemActivity extends AppCompatActivity implements Callback<Comm
             image.setVisibility(View.VISIBLE);
             Picasso.with(this)
                     .load(getImageURL(itemsEntity.getImage()))
-                        .resize(windowWidth, 0)
+                    .resize(windowWidth, 0)
                     .placeholder(R.mipmap.image_placeholder)
                     .error(R.mipmap.image_error)
                     .into(image);
@@ -120,7 +120,7 @@ public class ShowItemActivity extends AppCompatActivity implements Callback<Comm
             videoPlay.setVisibility(View.VISIBLE);
             Picasso.with(this)
                     .load(itemsEntity.getPic_url())
-                        .resize(windowWidth, 0)
+                    .resize(windowWidth, 0)
                     .placeholder(R.mipmap.image_placeholder)
                     .error(R.mipmap.image_error)
                     .into(videoImage);

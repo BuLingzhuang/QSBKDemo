@@ -56,12 +56,11 @@ public class ShowItemAdapter extends BaseAdapter {
             convertView.setTag(new ViewHolder(convertView));
         }
         Comments.ItemsEntity itemsEntity = list.get(position);
-        Log.e("新建item", ""+position);
         ViewHolder holder = (ViewHolder) convertView.getTag();
         if (itemsEntity.getUser() != null) {
             holder.name.setText(itemsEntity.getUser().getLogin());
             String iconURL = getIconURL(itemsEntity.getUser().getId(), itemsEntity.getUser().getIcon());
-            if (iconURL == null){
+            if (itemsEntity.getUser().getIcon().equals("")){
                 holder.icon.setImageResource(R.mipmap.ic_launcher);
             }else {
                 Picasso.with(context)
@@ -74,8 +73,8 @@ public class ShowItemAdapter extends BaseAdapter {
             holder.icon.setImageResource(R.mipmap.ic_launcher);
         }
         holder.content.setText(itemsEntity.getContent());
-        holder.floor.setText(itemsEntity.getFloor());
-        holder.like_count.setText(itemsEntity.getLike_count());
+        holder.floor.setText(itemsEntity.getFloor()+"楼");
+        holder.like_count.setText("赞:"+itemsEntity.getLike_count());
 
         return convertView;
     }

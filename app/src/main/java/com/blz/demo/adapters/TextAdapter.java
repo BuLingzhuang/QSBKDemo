@@ -61,7 +61,7 @@ public class TextAdapter extends BaseAdapter {
         if (itemsEntity.getUser() != null) {
             holder.name.setText(itemsEntity.getUser().getLogin());
             String iconURL = getIconURL(itemsEntity.getUser().getId(), itemsEntity.getUser().getIcon());
-            if (iconURL == null){
+            if (itemsEntity.getUser().getIcon().equals("")){
                 holder.icon.setImageResource(R.mipmap.ic_launcher);
             }else {
                 Picasso.with(context)

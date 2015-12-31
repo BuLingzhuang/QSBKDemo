@@ -113,7 +113,6 @@ public class TextFragment extends Fragment implements Callback<TextItem>, Adapte
             intent.putExtra("TextItem",itemsEntity);
 //            intent.putExtras(args);
             startActivity(intent);
-            Log.e(TAG, itemsEntity.getUser().getLogin());
         }
     }
 }

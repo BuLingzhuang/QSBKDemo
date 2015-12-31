@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:orientation="horizontal"
-    android:paddingLeft="10dp" android:paddingTop="10dp" android:paddingRight="10dp" android:paddingBottom="10dp"
+    android:background="#f4f4f4"
+    android:paddingLeft="10dp" android:paddingTop="15dp" android:paddingRight="15dp" android:paddingBottom="15dp"
     android:layout_height="match_parent">
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginRight="8dp"
         android:id="@+id/adapter_comments_icon"
         android:src="@mipmap/ic_launcher"/>
     <LinearLayout
@@ -19,22 +20,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="17sp"
+            android:textColor="#2f3136"
             android:text="用户名" />
         <TextView
             android:id="@+id/adapter_comments_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#636251"
             android:textSize="18sp" android:layout_marginTop="3dp"
             android:text="其实还真是撑的，怕人家笑话，才故意这么说的……\u0001[笑着流泪]\u0001[笑着流泪]\u0001[笑着流泪]" />
     </LinearLayout>
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginLeft="5dp">
         <TextView
             android:id="@+id/adapter_comments_floor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#ababab"
             android:text="1"
             />
         <TextView
@@ -42,6 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:textColor="#ababab"
             android:text="33"
             />
     </RelativeLayout>
