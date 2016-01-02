@@ -1,10 +1,12 @@
 package com.blz.demo;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -42,7 +44,11 @@ public class ShowItemActivity extends AppCompatActivity implements Callback<Comm
         setContentView(R.layout.activity_show_item);
         ListView listView = (ListView) findViewById(R.id.showItem_listView);
         View headerView = getLayoutInflater().inflate(R.layout.adapter_show_item_header, null);
-
+        //设置actionBar后退
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
         //设置内容显示部分
         ImageView icon = (ImageView) headerView.findViewById(R.id.showItem_text_icon);
         TextView name = (TextView) headerView.findViewById(R.id.showItem_text_name);
@@ -136,6 +142,17 @@ public class ShowItemActivity extends AppCompatActivity implements Callback<Comm
         Log.e(TAG, itemsEntity.getId());
         call = service.getList(itemsEntity.getId(), 1);
         call.enqueue(this);
+    }
+
+    //设置返回按钮的功能
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public static String getIconURL(long id, String icon) {
