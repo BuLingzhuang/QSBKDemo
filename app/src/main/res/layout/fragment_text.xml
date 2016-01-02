@@ -3,14 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" android:orientation="vertical"
     tools:context="com.blz.demo.fragments.DefaultFragment">
-
-    <ListView
+    <com.blz.demo.custom.SwipeRefreshLoadLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        android:scrollbars="none"
-        android:divider="#00000000"
-        android:dividerHeight="8dp"
-        android:id="@+id/fragment_text_listView"/>
-
+        android:id="@+id/fragment_text_swipeRefreshLayout">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:scrollbars="none"
+            android:divider="#00000000"
+            android:dividerHeight="8dp"
+            android:id="@+id/fragment_text_listView"/>
+    </com.blz.demo.custom.SwipeRefreshLoadLayout>
 </LinearLayout>

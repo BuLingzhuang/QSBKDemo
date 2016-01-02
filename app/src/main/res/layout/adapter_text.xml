@@ -7,14 +7,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@mipmap/ic_launcher"
             android:id="@+id/adapter_text_icon"/>
         <TextView
             android:layout_toRightOf="@id/adapter_text_icon"
             android:paddingLeft="15dp"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         android:paddingTop="10dp" android:paddingBottom="10dp" android:paddingLeft="10dp" android:paddingRight="10dp"
         android:id="@+id/adapter_text_content"
         android:textColor="#636251"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:text="见学长夫妇，说是最近俩人一直分床睡，已经好几个月了。我还以为是关系冷淡期，关切地问怎么回事。学长含羞一笑，说俩人共同爱好太多，三观太和，永远有聊不完的话题，一不小心就唠到三四点，再愉快地啪啪一下，第二天根本没法起床上班...秀得我泪流满面…"/>
     <FrameLayout
         android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:paddingLeft="10dp"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textColor="#959595"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
         <TextView
             android:paddingLeft="20dp"
             android:textColor="#959595"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/adapter_text_comments"
@@ -89,7 +89,7 @@
         <TextView
             android:paddingLeft="20dp"
             android:textColor="#959595"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/adapter_text_share"

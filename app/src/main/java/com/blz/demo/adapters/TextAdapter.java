@@ -133,7 +133,10 @@ public class TextAdapter extends BaseAdapter {
         matcher.find();
         return String.format(url,matcher.group(1),matcher.group(),"medium",image);
     }
-    public void addAll(Collection<? extends TextItem.ItemsEntity> collection){
+    public void addAll(Collection<? extends TextItem.ItemsEntity> collection,boolean isRefresh){
+        if (isRefresh){
+            list.clear();
+        }
         list.addAll(collection);
         notifyDataSetChanged();
     }
