@@ -1,5 +1,7 @@
 package com.blz.demo.items;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -38,35 +40,11 @@ public class TextItem implements Serializable{
         return items;
     }
 
-    @Override
-    public String toString() {
-        return "TextItem{" +
-                "items=" + items +
-                '}';
-    }
-
     public static class ItemsEntity implements Serializable {
+        //使用混淆的标准做法，所有的都加上注解
         private String high_url;
         private String format;
         private String image;
-
-        @Override
-        public String toString() {
-            return "ItemsEntity{" +
-                    "high_url='" + high_url + '\'' +
-                    ", format='" + format + '\'' +
-                    ", image='" + image + '\'' +
-                    ", user=" + user +
-                    ", id='" + id + '\'' +
-                    ", votes=" + votes +
-                    ", content='" + content + '\'' +
-                    ", pic_url='" + pic_url + '\'' +
-                    ", comments_count=" + comments_count +
-                    ", low_url='" + low_url + '\'' +
-                    ", share_count=" + share_count +
-                    ", type='" + type + '\'' +
-                    '}';
-        }
 
         /**
          * avatar_updated_at : 1404863863
@@ -199,15 +177,6 @@ public class TextItem implements Serializable{
             private int id;
             private String icon;
 
-            @Override
-            public String toString() {
-                return "UserEntity{" +
-                        "login='" + login + '\'' +
-                        ", id=" + id +
-                        ", icon='" + icon + '\'' +
-                        '}';
-            }
-
             public void setLogin(String login) {
                 this.login = login;
             }
@@ -236,14 +205,6 @@ public class TextItem implements Serializable{
         public static class VotesEntity implements Serializable {
             private int down;
             private int up;
-
-            @Override
-            public String toString() {
-                return "VotesEntity{" +
-                        "down=" + down +
-                        ", up=" + up +
-                        '}';
-            }
 
             public void setDown(int down) {
                 this.down = down;

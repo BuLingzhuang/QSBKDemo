@@ -115,7 +115,9 @@ public class TextFragment extends Fragment implements Callback<TextItem>, Adapte
 
     @Override
     public void onResponse(Response<TextItem> response, Retrofit retrofit) {
+        Log.e(TAG, "主页的网络加载回调");
         itemsEntityList = response.body().getItems();
+        Log.e(TAG, "内容数量:"+itemsEntityList.size());
         adapter.addAll(itemsEntityList, isRefresh);
         if (refreshLayout.isRefreshing()) {
             refreshLayout.setRefreshing(false);
